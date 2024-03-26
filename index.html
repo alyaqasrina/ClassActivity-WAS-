@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validate.js"></script>
+    <title>A. Student Details</title>
+    <style>
+        form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            width: 50%;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>A. Student Details</h1>
+    <form id="form" method="post" action="server.php">
+      <label for="name">Name (Legal/Official) :</label>
+      <input type="text" id="name" name="name" required><br>
+      <br>
+      <label for="matricNo">Matric No :</label>
+      <input type="text" id="matricNo" name="matricNo" required><br>
+      <br>
+      <label for="currAdd">Current Address :</label>
+      <input type="" id="currAdd" name="currAdd" required><br>
+      <br>
+      <label for="homeAdd">Home Address :</label>
+      <input type="" id="homeAdd" name="homeAdd" required><br>
+      <br>
+      <label for="email">Email (Gmail Account) :</label>
+      <input type="email" id="email" name="email" required><br>
+      <br>
+      <label for="mobile">Mobile Phone No :</label>
+      <input type="tel" id="Mobile" name="mobile" required><br> 
+      <br>
+      <label for="home">Home Phone No (Emergency) :</label>
+      <input type="tel" id="Home" name="home" required><br> 
+
+      <div id="error-msg" style="color: red;"></div><br>
+
+      <input type="submit" name="formsubmit" id="formsubmit">
+    </form>
+  </div>
+</body>
+</html>
