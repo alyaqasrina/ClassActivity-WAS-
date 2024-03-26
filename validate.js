@@ -13,6 +13,8 @@ function validateForm() {
     var matricPattern = /^\d{7}$/; // 8 digits allowed
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valid email format
     var phonePattern = /^\d{10}$/; // 10 digits allowed
+    var addressPattern =  /^[A-Za-z0-9\s,.]+(?:\d{5})?.*/; // Only letters, numbers, spaces, commas, and periods allowed
+
 
 
     // Validate each field
@@ -24,11 +26,11 @@ function validateForm() {
         showError("Error: Matric No must be 8 digits long.");
         return false;
     }
-    if (!namePattern.test(currAdd)) {
+    if (!addressPattern.test(currAdd)) {
         showError("Error: Current Address must contain only letters and spaces.");
         return false;
     }
-    if (!namePattern.test(homeAdd)) {
+    if (!addressPattern.test(homeAdd)) {
         showError("Error: Home Address must contain only letters and spaces.");
         return false;
     }
