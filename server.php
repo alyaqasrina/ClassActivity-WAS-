@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the prepared statement
     if ($stmt->execute()) {
-        echo "New record created successfully";
+        echo "Form created successfully!";
     } else {
         echo "Error: " . $stmt->error;
     }
