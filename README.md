@@ -16,12 +16,13 @@ It contains PHP code to process the form data and display a "Form created succes
 Users are redirected to this page after successfully submitting the form, where they receive confirmation of their submission.
 
 <h3>Assignment 2: Authentication</h3>
-<bold>register.php: </bold> it contains the registration page where new users create an account.
-login.php: it handles user authentication, including input validation and session management.
-logout.php: it handles the user's logout by terminating the session and redirecting to the login page.
-style.css: it contains the format and styling of the pages.
-auth_session.php: ensuring that only authenticated users can access the content beyond this point. If a user tries to access this page without being logged in, they will be redirected to the login page.
-db.php: It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
+<h5>register.php:</h5> 
+it contains the registration page where new users create an account.
+<h5>login.php:</h5> it handles user authentication, including input validation and session management.
+<h5>logout.php:</h5> it handles the user's logout by terminating the session and redirecting to the login page.
+<h5>style.css:</h5> it contains the format and styling of the pages.
+<h5>auth_session.php:</h5> ensuring that only authenticated users can access the content beyond this point. If a user tries to access this page without being logged in, they will be redirected to the login page.
+<h5>db.php:</h5> It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
 
 
 
