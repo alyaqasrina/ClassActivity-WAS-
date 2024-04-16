@@ -1,5 +1,5 @@
 # Web Application Security | INFO 4345 Class Assignment
-<title>Assignments</title>
+<h1>Assignments</h1>
 <h3>Assignment 1: Client and Server Side</h3>
 <h5>index.html:</h5>
 This file contains the HTML code for the student details form.
@@ -24,8 +24,8 @@ it contains the registration page where new users create an account.
 <h5>style.css:</h5> it contains the format and styling of the pages.
 <h5>auth_session.php:</h5> ensuring that only authenticated users can access the content beyond this point. If a user tries to access this page without being logged in, they will be redirected to the login page.
 <h5>db.php:</h5> It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
-
-<title>Navigation</title>
+<be></be>
+<h1>Navigation</h1>
 1) Log in through login.php or registering a new account through register.php.
 2) Fill in the student detail form once authenticated  via index.html. 
 
