@@ -21,7 +21,7 @@ login.php: it handles user authentication, including input validation and sessio
 logout.php: it handles the user's logout by terminating the session and redirecting to the login page.
 style.css: it contains the format and styling of the pages.
 auth_session.php: ensuring that only authenticated users can access the content beyond this point. If a user tries to access this page without being logged in, they will be redirected to the login page.
-db.php: 
+db.php: It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
 
 
 
