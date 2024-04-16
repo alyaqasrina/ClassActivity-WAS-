@@ -16,7 +16,7 @@ It contains PHP code to process the form data and display a "Form created succes
 Users are redirected to this page after successfully submitting the form, where they receive confirmation of their submission.
 
 <h3>Assignment 2: Authentication</h3>
-register.php: it contains the registration page where new users create an account.
+<bold>register.php: </bold> it contains the registration page where new users create an account.
 login.php: it handles user authentication, including input validation and session management.
 logout.php: it handles the user's logout by terminating the session and redirecting to the login page.
 style.css: it contains the format and styling of the pages.
