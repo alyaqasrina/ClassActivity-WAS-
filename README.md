@@ -26,7 +26,7 @@ it contains the registration page where new users create an account.
 <h5>db.php:</h5> It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
 <be></be>
 <h1>Navigation</h1>
-1) Log in through login.php or registering a new account through register.php.
+1) Log in through login.php or registering a new account through register.php. <be>
 2) Fill in the student detail form once authenticated  via index.html. 
 
 
