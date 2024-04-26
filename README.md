@@ -25,6 +25,14 @@ it contains the registration page where new users create an account.
 <h5>auth_session.php:</h5> ensuring that only authenticated users can access the content beyond this point. If a user tries to access this page without being logged in, they will be redirected to the login page.
 <h5>db.php:</h5> It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
 <be></be>
+
+<h3>Assignment 3: Authorization</h3>
+<h5>index.php:</h5> 
+it is the default page that the users go through first to authenticate before redirecting to student_form page
+<h5>updated auth_session.php:</h5> updated auth_session page include session management for 'role'.
+<h5>updated register.php:</h5> updated register.php page includes the user choosing their role between admin, guest, and user.
+<h5>role.php</h5> it includes the function for what each role can do 
+<be></be>
 <h1>Navigation</h1>
 1) Log in through login.php or registering a new account through register.php. <be>
 2) Fill in the student detail form once authenticated  via index.html. 
