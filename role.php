@@ -1,6 +1,7 @@
 <?php
     include 'db.php';
     include 'auth_session.php'; // Include your authorization check file here
+    header("Content-Security-Policy: default-src 'self';");
 
     // Create
     function create($username, $role) {
@@ -56,7 +57,7 @@ $offset = ($page - 1) * $limit;
 
 // SQL query to select data
 $sql = "SELECT id, name, matricNo, currAdd, homeAdd, email, mobile, home FROM student LIMIT $limit OFFSET $offset";
-$result = $conn->query($sql);
+$result = $con->query($sql);
 
 echo '<table class="table table-bordered">';
 echo '<thead>';
@@ -76,8 +77,8 @@ if ($result->num_rows > 0) {
         echo '<td>' . htmlspecialchars($row["email"]) . '</td>';
         echo '<td>' . htmlspecialchars($row["mobile"]) . '</td>';
         echo '<td>' . htmlspecialchars($row["home"]) . '</td>';
-        echo "<td><button onclick='performAction(\"edit\", {$row['id']})'>Edit</button></td>";
-        echo "<td><button onclick='performAction(\"delete\", {$row['id']})'>Delete</button></td>";
+        echo "<td><button onclick='performAction(\"edit\", {$student['id']})'>Edit</button></td>";
+        echo "<td><button onclick='performAction(\"delete\", {$student['id']})'>Delete</button></td>";
         echo '</tr>';
     }
 } else {
