@@ -26,12 +26,13 @@ it contains the registration page where new users create an account.
 <h5>db.php:</h5> It establishes a connection to the MySQL database running on the local server. If the connection fails, it outputs an error message indicating failure to connect to the database.
 <be></be>
 
-<h3>Assignment 3: Authorization</h3>
-<h5>index.php:</h5> 
-it is the default page that the users go through first to authenticate before redirecting to student_form page
-<h5>updated auth_session.php:</h5> updated auth_session page include session management for 'role'.
-<h5>updated register.php:</h5> updated register.php page includes the user choosing their role between admin, guest, and user.
-<h5>role.php</h5> it includes the function for what each role can do 
+<h3>Assignment 4: XSS & CSRF</h3>
+<h5>updated role.php:</h5> 
+updated role.php includes added CSP header.
+<h5>updated auth_session.php:</h5> updated auth_session page include CSRF token
+<h5>updated register.php:</h5> updated register.php page includes CSP header.
+<h5>updated index.php</h5> updated index.php includes CSP header.
+<h5>updated student_form.php</h5> updated student_form.php includes CSP header.
 <be></be>
 <h1>Navigation</h1>
 1) Log in through login.php or registering a new account through register.php. <be>
