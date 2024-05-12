@@ -7,8 +7,9 @@
 </head>
 <body>
 <?php
+    header("Content-Security-Policy: default-src 'self';");
     require('db.php');
-    session_start();
+    require('auth_session.php');
     if (isset($_POST['username'])) {
         $username = stripslashes($_REQUEST['username']);    
         $username = mysqli_real_escape_string($con, $username);
@@ -43,6 +44,10 @@
         <p class="link"><a href="registration.php">New Registration</a></p>
   </form>
 <?php
+    }
+?>  
+</body>
+</html>
     }
 ?>  
 </body>
