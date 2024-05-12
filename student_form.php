@@ -1,5 +1,6 @@
 <?php
     require_once('auth_session.php');
+    header("Content-Security-Policy: default-src 'self';");
 ?>
 
 <!DOCTYPE html>
@@ -80,6 +81,7 @@
       <br>
       <label for="home">Home Phone No (Emergency) :</label>
       <input type="tel" id="home" name="home" required><br> 
+      <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
       <div id="error-msg" style="color: red;"></div><br>
 
@@ -105,25 +107,26 @@
             </thead>
             <tbody>
             <?php
-                require('role.php');
-                $students = read();
-                foreach ($students as $student) {
+            require('role.php');
+            $students = read();
+            foreach ($students as $student) {
                 echo "<tr>";
-                echo "<td>" . $student['name'] . "</td>";
-                echo "<td>" . $student['matricNo'] . "</td>";
-                echo "<td>" . $student['currAdd'] . "</td>";
-                echo "<td>" . $student['homeAdd'] . "</td>";
-                echo "<td>" . $student['email'] . "</td>";
-                echo "<td>" . $student['mobile'] . "</td>";
-                echo "<td>" . $student['home'] . "</td>";
-                echo "<td><button onclick='performAction(\"update\", {$row['id']})'>Edit</button></td>";
-                echo "<td><button onclick='performAction(\"delete\", {$row['id']})'>Delete</button></td>";
+                echo "<td>" . htmlspecialchars($student['name'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['matricNo'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['currAdd'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['homeAdd'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['email'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['mobile'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td>" . htmlspecialchars($student['home'], ENT_QUOTES, 'UTF-8') . "</td>";
+                echo "<td><button onclick='performAction(\"update\", " . htmlspecialchars($student['id'], ENT_QUOTES, 'UTF-8') . ")'>Edit</button></td>";
+                echo "<td><button onclick='performAction(\"delete\", " . htmlspecialchars($student['id'], ENT_QUOTES, 'UTF-8') . ")'>Delete</button></td>";
                 echo "</tr>";
-                }
-            ?>
+    }
+?>
             </tbody>
         </table>
     </div>
   </section>
 </body>
 </html>
+
